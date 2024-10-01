@@ -1998,7 +1998,7 @@ def tixcraft_keyin_captcha_code(driver, answer = "", auto_submit = False):
                         tixcraft_toast(driver, "※ 按 Enter 如果答案是: " + answer)
                 except Exception as exc:
                     print("send_keys ocr answer fail.")
-
+    check_checkbox(driver, By.CSS_SELECTOR, '#TicketForm_agree')
     return is_verifyCode_editing, is_form_sumbited
 
 def tixcraft_reload_captcha(driver, domain_name):
